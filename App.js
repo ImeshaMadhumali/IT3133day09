@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { PaperProvider, Text } from 'react-native-paper';
+import { PaperProvider, Text, Divider } from 'react-native-paper';
 
 export default function App() {
   return (
     <PaperProvider>
       <View style={styles.container}>
         <Text variant="headlineLarge">Headline Large</Text>
-        <Text variant="bodyMedium">
+        <Divider />
+        <Text variant="bodyMedium" style={styles.body}>
           Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
           To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
           Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
@@ -26,11 +27,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 16,
-    justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',// Center the content vertically
   },
+  // heading: {
+  //   fontWeight: 'bold', // Bold text
+  //   color: '#6200EE', // Accent color
+  // },
   body: {
     padding: 5,
     textAlign: 'justify',
+    color: '#333',// Dark gray for better readability
   },
 });
